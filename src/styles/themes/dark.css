@@ -1,0 +1,44 @@
+.text-ok {
+  color: var(--sem-ok);
+}
+
+.text-warn {
+  color: var(--sem-warn);
+}
+
+.text-crit {
+  color: var(--sem-critical);
+}
+
+.text-info {
+  color: var(--sem-info);
+}
+
+.text-ai {
+  color: var(--sem-ai);
+}
+
+.text-muted {
+  color: var(--text-tertiary);
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.leaflet-container {
+  background: #060a14 !important;
+}
+
+.leaflet-control-attribution,
+.leaflet-control-zoom {
+  display: none !important;
+}
+
+.leaflet-pane {
+  z-index: 1;
+}

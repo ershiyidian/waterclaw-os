@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "influx-tsdb": {
+      "name": "InfluxDB-TSDB",
+      "transport": "stdio",
+      "command": "python",
+      "args": ["-m", "mcp_server_influxdb"],
+      "env": {
+        "INFLUXDB_URL": "http://influxdb.waterclaw.local:8086"
+      },
+      "permission": "read-only",
+      "icon": "stream",
+      "description": "多源遥测时序数据库。",
+      "allowedTools": ["query_range", "get_latest"]
+    },
+    "city-gis": {
+      "name": "City-GIS",
+      "transport": "streamable-http",
+      "url": "http://gis.shanghai.gov.cn/mcp",
+      "permission": "read-only",
+      "icon": "map",
+      "description": "河道、雨污管网、市政边界图层。",
+      "allowedTools": ["gis.layers", "gis.route_constraints", "route_constraints"]
+    },
+    "gb3838-eval": {
+      "name": "GB3838-Eval",
+      "transport": "streamable-http",
+      "url": "http://standard.waterclaw.local/gb3838/mcp",
+      "permission": "read-only",
+      "icon": "api",
+      "description": "地表水环境质量标准评价工具。",
+      "allowedTools": ["gb3838.eval", "gb3838.thresholds"]
+    },
+    "mavlink-bus": {
+      "name": "MAVLink-Bus",
+      "transport": "streamable-http",
+      "url": "http://edge.waterclaw.local/mavlink/mcp",
+      "permission": "read-write",
+      "icon": "bus",
+      "description": "USV 指令总线，高权限写入通道。",
+      "allowedTools": ["mission.dispatch", "mission.rtl", "safety.estop"]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "waterclaw",
+  "version": "0.1.0",
+  "description": "WaterClaw OS agent skills and MCP tools for urban water-network incident response.",
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "api_base": {
+      "type": "string",
+      "title": "WaterClaw API Base",
+      "description": "Backend URL, e.g. http://127.0.0.1:8787",
+      "default": "http://127.0.0.1:8787"
+    },
+    "api_token": {
+      "type": "string",
+      "title": "WaterClaw API Token",
+      "description": "Optional backend token if WATERCLAW_LLM_GATEWAY_KEY is enabled.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,52 @@
+policies:
+  - id: usv-dispatch-allowlist
+    description: USV dispatch must target registered vessels, drain points, and missions.
+    applies_to: [dispatch_usv]
+    rules:
+      - field: usv
+        operator: in
+        values: [USV-01, USV-02]
+        error: "Unknown USV: {value}"
+      - field: target
+        operator: in
+        values: [DP-01, DP-02, DP-03, DP-04, DP-05, BASE]
+        error: "Target outside allowed registry: {value}"
+      - field: mission
+        operator: in
+        values: [DP-03_INTERCEPT_SAMPLE_30S, TP-04_SENTRY_MONITOR, RETURN_TO_BASE, ESTOP_HOLD_POSITION]
+        error: "Mission is not in control allowlist: {value}"
+
+  - id: path-plan-allowlist
+    description: Planned paths may target registered vessels and known drain/station points only.
+    applies_to: [plan_dubins_path]
+    rules:
+      - field: usv
+        operator: in
+        values: [USV-01, USV-02]
+        error: "Unknown USV: {value}"
+      - field: target
+        operator: in
+        values: [DP-01, DP-02, DP-03, DP-04, DP-05, BASE, TP-01, TP-02, TP-03, TP-04, TP-05]
+        error: "Target outside allowed registry: {value}"
+
+  - id: control-usv-allowlist
+    description: Critical control requests must reference registered vessels.
+    applies_to: [rtl_usv, request_estop]
+    rules:
+      - field: usvs
+        operator: subset
+        values: [USV-01, USV-02]
+        error: "Unknown USV in control scope: {value}"
+
+  - id: notification-channel-allowlist
+    description: Authority notifications require registered incidents and allowed channels.
+    applies_to: [notify_authority]
+    rules:
+      - field: incidentId
+        operator: matches
+        value: "^INC-"
+        error: "Authority notification requires a registered incident id."
+      - field: channel
+        operator: in
+        values: [上海市水务局应急平台, 内部演练通道]
+        error: "Notification channel is not allowed: {value}"

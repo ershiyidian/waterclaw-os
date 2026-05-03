@@ -1,0 +1,38 @@
+{
+  "name": "waterclaw-os",
+  "version": "3.3.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "waterclaw": "./bin/waterclaw.js"
+  },
+  "scripts": {
+    "waterclaw": "node ./bin/waterclaw.js",
+    "install:all": "node ./bin/waterclaw.js install",
+    "doctor": "node ./bin/waterclaw.js doctor",
+    "clean": "node ./bin/waterclaw.js clean",
+    "dev": "vite --host 127.0.0.1",
+    "backend:env": "powershell -ExecutionPolicy Bypass -File backend/create-conda-env.ps1",
+    "backend:dev": "powershell -ExecutionPolicy Bypass -File backend/run.ps1",
+    "backend:mcp": "powershell -ExecutionPolicy Bypass -File claude-plugin/waterclaw/scripts/run-mcp.ps1",
+    "types:api": "openapi-typescript http://127.0.0.1:8787/openapi.json -o src/api-types.d.ts",
+    "test:simulation": "python -m tests.simulation.run_illegal_discharge_simulation",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "echarts": "^5.5.1",
+    "leaflet": "^1.9.4",
+    "lucide-vue-next": "^0.468.0",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.14",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.1.10",
+    "openapi-typescript": "^7.6.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "waterclaw": {
+      "command": "conda",
+      "args": [
+        "run",
+        "--no-capture-output",
+        "-n",
+        "waterclaw-llm",
+        "python",
+        "-s",
+        "-m",
+        "app.mcp.fastmcp_server",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "PYTHONPATH": "${CLAUDE_PLUGIN_ROOT}/../../backend",
+        "PYTHONNOUSERSITE": "1",
+        "WATERCLAW_API_BASE": "${user_config.api_base}",
+        "WATERCLAW_API_TOKEN": "${user_config.api_token}"
+      }
+    }
+  }
+}

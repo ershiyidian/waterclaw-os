@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.codex-tasks/
+
+backend/.waterclaw/
+backend/backend/
+backend/.mcp-smoke*.log
+backend/app/**/__pycache__/
+tests/**/__pycache__/
+*.py[cod]
+*.log
+
+.env
+backend/.env
+merged_frontend.txt

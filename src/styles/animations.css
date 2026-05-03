@@ -1,0 +1,154 @@
+@keyframes sdPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes bootPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(56, 189, 248, 0);
+  }
+}
+
+@keyframes bootLineIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes feedSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes waterShift {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 2px 4px;
+  }
+}
+
+@keyframes fpvBob {
+  0%,
+  100% {
+    transform: translateX(-1px) rotate(-0.4deg);
+  }
+  50% {
+    transform: translateX(1px) rotate(0.5deg);
+  }
+}
+
+@keyframes fpvGlint {
+  0% {
+    transform: translate(-120%, -30%) rotate(24deg);
+    opacity: 0;
+  }
+  22% {
+    opacity: 0.34;
+  }
+  48% {
+    transform: translate(160%, 80%) rotate(24deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes yoloJitter {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 1px);
+  }
+  75% {
+    transform: translate(2px, 0);
+  }
+}
+
+@keyframes lidarSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dotFlicker {
+  0%,
+  100% {
+    opacity: 0.78;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+@keyframes drainPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes awaitingApproval {
+  0%,
+  100% {
+    border-color: rgba(245, 158, 11, 0.28);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 24px rgba(245, 158, 11, 0.05);
+  }
+  50% {
+    border-color: rgba(245, 158, 11, 0.7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 34px rgba(245, 158, 11, 0.15);
+  }
+}
+
+@keyframes agentRing {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mcpFlow {
+  from {
+    stroke-dashoffset: 72;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes miniBlink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}

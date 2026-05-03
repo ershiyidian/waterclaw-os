@@ -1,0 +1,8 @@
+{
+  "app.title": "河网·智巡",
+  "app.subtitle": "城市水生态智能协同指挥平台",
+  "agent.name": "WaterClaw AI Copilot",
+  "command.gb3838": "GB3838 实时评价",
+  "command.fleet": "艇群状态汇总",
+  "command.reset": "重置为常态巡航"
+}
