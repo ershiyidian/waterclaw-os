@@ -21,14 +21,14 @@ npm run waterclaw -- install
 
 ```env
 LITELLM_MODEL=openai/gpt-4o-mini
-OPENAI_API_KEY=sk-...
+OPENAI_API_KEY=<your-openai-api-key>
 ```
 
 也可以使用 OpenRouter：
 
 ```env
 LITELLM_MODEL=openrouter/openai/gpt-4o-mini
-OPENROUTER_API_KEY=sk-or-...
+OPENROUTER_API_KEY=<your-openrouter-api-key>
 ```
 
 或本地 Ollama：
@@ -85,3 +85,4 @@ Accept: text/event-stream
 - 如果要给多人访问本地后端，可以设置 `WATERCLAW_LLM_GATEWAY_KEY`，再让前端或反向代理注入 `X-WaterClaw-LLM-Key`。
 - 生产部署时建议把后端放在内网 API Gateway 后面，并加访问控制、审计日志、速率限制和模型预算。
 - LiteLLM 依赖应定期更新；本项目 `backend/requirements.txt` 使用 `litellm>=1.83.0`，避免使用已知存在供应链风险的旧版本范围。
+

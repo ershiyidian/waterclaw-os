@@ -80,7 +80,7 @@ def _default_statuses() -> dict[str, McpServerStatus]:
             id="drainage-registry",
             name="Drainage-Registry",
             icon="database",
-            endpoint="mcp://water.gov.cn/drainage-registry",
+            endpoint="mcp://drainage-registry.example.invalid/demo",
             status="offline",
             permission="read-only",
             capabilities={"resources": 0, "tools": 0, "prompts": 0},
@@ -91,7 +91,7 @@ def _default_statuses() -> dict[str, McpServerStatus]:
             id="gb3838-eval",
             name="GB3838-Eval",
             icon="api",
-            endpoint="mcp://standard.cn/gb3838/evaluator",
+            endpoint="mcp://standards.example.invalid/gb3838/evaluator",
             status="offline",
             permission="read-only",
             capabilities={"resources": 0, "tools": 0, "prompts": 0},
@@ -102,7 +102,7 @@ def _default_statuses() -> dict[str, McpServerStatus]:
             id="weather-api",
             name="Weather-API",
             icon="weather",
-            endpoint="mcp://weather.cn/shanghai/stream",
+            endpoint="mcp://weather.example.invalid/shanghai/stream",
             status="offline",
             permission="read-only",
             capabilities={"resources": 0, "tools": 0, "prompts": 0},
@@ -113,7 +113,7 @@ def _default_statuses() -> dict[str, McpServerStatus]:
             id="mavlink-bus",
             name="MAVLink-Bus",
             icon="bus",
-            endpoint="mcp://edge.waterclaw.local/mavlink",
+            endpoint="mcp://edge.example.invalid/mavlink",
             status="offline",
             permission="read-write",
             capabilities={"resources": 0, "tools": 0, "prompts": 0},
@@ -124,7 +124,7 @@ def _default_statuses() -> dict[str, McpServerStatus]:
             id="city-gis",
             name="City-GIS",
             icon="map",
-            endpoint="mcp://shanghai.gov.cn/city-gis",
+            endpoint="mcp://gis.example.invalid/city-gis",
             status="offline",
             permission="read-only",
             capabilities={"resources": 0, "tools": 0, "prompts": 0},
@@ -135,7 +135,7 @@ def _default_statuses() -> dict[str, McpServerStatus]:
             id="influx-tsdb",
             name="InfluxDB-TSDB",
             icon="stream",
-            endpoint="mcp://waterclaw.local/influxdb",
+            endpoint="mcp://influxdb.example.invalid/waterclaw",
             status="offline",
             permission="read-only",
             capabilities={"resources": 0, "tools": 0, "prompts": 0},
@@ -408,3 +408,4 @@ class McpManager:
 
 
 mcp_manager = McpManager()
+

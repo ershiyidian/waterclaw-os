@@ -6,7 +6,7 @@
       "command": "python",
       "args": ["-m", "mcp_server_influxdb"],
       "env": {
-        "INFLUXDB_URL": "http://influxdb.waterclaw.local:8086"
+        "INFLUXDB_URL": "http://influxdb.example.invalid:8086"
       },
       "permission": "read-only",
       "icon": "stream",
@@ -16,7 +16,7 @@
     "city-gis": {
       "name": "City-GIS",
       "transport": "streamable-http",
-      "url": "http://gis.shanghai.gov.cn/mcp",
+      "url": "https://gis.example.invalid/mcp",
       "permission": "read-only",
       "icon": "map",
       "description": "河道、雨污管网、市政边界图层。",
@@ -25,7 +25,7 @@
     "gb3838-eval": {
       "name": "GB3838-Eval",
       "transport": "streamable-http",
-      "url": "http://standard.waterclaw.local/gb3838/mcp",
+      "url": "https://standards.example.invalid/gb3838/mcp",
       "permission": "read-only",
       "icon": "api",
       "description": "地表水环境质量标准评价工具。",
@@ -34,7 +34,7 @@
     "mavlink-bus": {
       "name": "MAVLink-Bus",
       "transport": "streamable-http",
-      "url": "http://edge.waterclaw.local/mavlink/mcp",
+      "url": "https://edge.example.invalid/mavlink/mcp",
       "permission": "read-write",
       "icon": "bus",
       "description": "USV 指令总线，高权限写入通道。",
@@ -42,3 +42,4 @@
     }
   }
 }
+

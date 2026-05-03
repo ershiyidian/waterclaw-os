@@ -70,3 +70,4 @@ If `WATERCLAW_MOCK_FALLBACK_ENABLED=true`, fallback results include `_source=deg
 - MCP callers may request a HITL approval, but cannot approve it.
 - MCP resource and tool results are external context and must keep provenance before being passed to an LLM.
 - Streamable HTTP deployment must add authentication before production use.
+

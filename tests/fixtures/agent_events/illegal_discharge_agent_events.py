@@ -23,7 +23,7 @@ MCP_SERVERS: list[dict[str, Any]] = [
         "id": "influx-tsdb",
         "name": "InfluxDB-TSDB",
         "icon": "stream",
-        "endpoint": "mcp://waterclaw.local/influxdb",
+        "endpoint": "mcp://influxdb.example.invalid/waterclaw",
         "status": "connected",
         "permission": "read-only",
         "capabilities": {"resources": 128, "tools": 7, "prompts": 2},
@@ -38,7 +38,7 @@ MCP_SERVERS: list[dict[str, Any]] = [
         "id": "city-gis",
         "name": "City-GIS",
         "icon": "map",
-        "endpoint": "mcp://shanghai.gov.cn/city-gis",
+        "endpoint": "mcp://gis.example.invalid/city-gis",
         "status": "connected",
         "permission": "read-only",
         "capabilities": {"resources": 31, "tools": 5, "prompts": 2},
@@ -261,3 +261,4 @@ ILLEGAL_DISCHARGE_AGENT_EVENT_FRAMES: list[dict[str, Any]] = [
         "data": {"role": "assistant", "severity": "warn", "content": "证据链已补齐，模拟事件进入审批等待。未批准前没有控制命令，也没有 MAVLink-Bus 写入。"},
     },
 ]
+
